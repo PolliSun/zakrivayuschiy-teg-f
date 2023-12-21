@@ -14,7 +14,14 @@
 
 */
 
+
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: var(--main-font-weight);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
+
+
