@@ -12,13 +12,19 @@
     --text-color: #000000;
     --main-font-weight: 400;
     --accent-font-weight: 700;
-    --bg-image: url(../images/background.png);
-  }
-  
-  :root.theme-dark {
+    --bg-gradient: #d3d3d3;
+    --bg-gradient-start: #e7e7e7;
+    --bg-gradient-end: #1a1a1a;
+}
+
+
+:root.theme-dark {
     --bg-color: #000000;
     --text-color: #00cc14;
     --main-font-weight: 465;
     --accent-font-weight: 785;
-  }
-  
+    --bg-gradient: #000;
+    --bg-gradient-start: #007f0c;
+    --bg-gradient-end: #004306;
+}
+

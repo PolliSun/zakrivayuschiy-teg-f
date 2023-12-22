@@ -14,14 +14,15 @@
 
 */
 
-
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: var(--main-font-weight);
   background-color: var(--bg-color);
   color: var(--text-color);
+  background-image: repeating-linear-gradient(var(--bg-gradient),transparent 2px),
+    repeating-linear-gradient(90deg, var(--bg-gradient), transparent 2px),
+    linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end));
+  background-size: cover;
+  height: 9071px;
 }
-
-
