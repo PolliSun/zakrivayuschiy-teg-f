@@ -7,4 +7,7 @@
   --text-color: #000000;
   --main-font-weight: 400;
   --accent-font-weight: 700;
+  --bg-gradient: #d3d3d3;
+  --bg-gradient-start: #e7e7e7;
+  --bg-gradient-end: #1a1a1a;
 }
