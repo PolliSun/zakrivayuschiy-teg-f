@@ -10,4 +10,7 @@
   --bg-gradient: #d3d3d3;
   --bg-gradient-start: #e7e7e7;
   --bg-gradient-end: #1a1a1a;
+  --inversion-color: #fff;
+  --red-color-heart:#FF0000;
+  --none-color-heart: rgba(256, 0, 0, 0);
 }
