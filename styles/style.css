@@ -272,6 +272,7 @@ p {
   opacity: 0.5;
   top: 25px;
   right: 25px;
+  text-transform: uppercase;
   text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color),
     1px 0 var(--bg-color), 0 -1px var(--bg-color);
 }
