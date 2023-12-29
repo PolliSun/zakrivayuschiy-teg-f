@@ -17,28 +17,33 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: var(--main-font-weight);
+  font-variation-settings: "wgth" var(--main-font-weight);
   font-family: "Inter-Variable", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   background-image: repeating-linear-gradient(
-      var(--bg-gradient),
-      transparent 2px
+      to right,
+      var(--bg-gradient) 0 2px,
+      transparent 2px 4px
     ),
-    repeating-linear-gradient(90deg, var(--bg-gradient), transparent 2px),
-    linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end));
+    repeating-linear-gradient(
+      to bottom,
+      var(--bg-gradient) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
   background-size: cover;
   background-attachment: fixed;
 }
 
-button {
+.button {
   border: 2px solid var(--text-color);
   background-color: var(--bg-color);
   cursor: pointer;
 }
 
-h2,
-p {
+.card-title,
+.card_text {
   font-size: 18px;
 }
 
@@ -142,6 +147,7 @@ p {
   content: "▶";
   position: absolute;
   left: -18px;
+  top: 0;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -182,6 +188,10 @@ p {
 .card-title {
   font-weight: var(--accent-font-weight);
   padding: 4px 10px 6px;
+}
+
+.card_text {
+  line-height: 21px;
 }
 
 .card-paragraph-container {
@@ -239,7 +249,6 @@ p {
   width: 21px;
   height: 21px;
   mix-blend-mode: difference;
-  stroke: var(--inversion-color);
 }
 
 .card__icon-button:focus {
@@ -313,26 +322,27 @@ p {
   gap: 8px;
   line-height: 90%;
   padding: 15px 20px;
+  color: var(--inversion-color);
 }
 
 .close-button {
+  position: relative;
   width: 100%;
   padding: 7px;
+  overflow: hidden;
   text-transform: uppercase;
 }
 
 .button-save::before,
-.card__like-button::before {
+.card__like-button::before,
+.close-button::before {
   content: "";
   position: absolute;
   width: 0;
   height: 100%;
-  display: block;
   left: 0;
   top: 0;
-  transform: translateX(-100%);
   background-color: var(--text-color);
-  overflow: hidden;
   transition: 0.5s ease-in-out;
 }
 
@@ -366,10 +376,10 @@ p {
 .dialog-floppy-image {
   inline-size: 39px;
   block-size: 39px;
-  stroke: var(--text-color);
+  mix-blend-mode: normal;
 }
 
-dialog::backdrop {
+.dialog::backdrop {
   opacity: 0.75;
   background: var(--bg-color, #000);
 }
@@ -381,9 +391,11 @@ dialog::backdrop {
 }
 
 .button-save:hover::before,
-.card__like-button:hover::before {
+.card__like-button:hover::before,
+.close-button:hover::before {
   width: 100%;
   transform: translateX(0);
+  background-color: var(--text-color);
 }
 
 .button__text {
