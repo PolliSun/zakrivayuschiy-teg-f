@@ -94,7 +94,7 @@ p {
   margin: 100px auto;
   font-family: var(--accent-font-family);
   padding: 136px 0 15px;
-  width: min(698px, 100%);
+  width: clamp(0px, 100%, 698px);
   background-color: var(--bg-color);
   text-transform: uppercase;
   justify-content: center;
@@ -170,7 +170,7 @@ p {
 /*card*/
 
 .section {
-  width: min(698px, 100%);
+  width: clamp(0px, 100%, 698px);
   margin: 0 auto 50px;
 }
 
