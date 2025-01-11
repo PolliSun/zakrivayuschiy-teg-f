@@ -175,14 +175,11 @@
 
 /*card*/
 
-.section {
-  width: clamp(0px, 100%, 698px);
-  margin: 0 auto 50px;
-}
-
 .card {
   background-color: var(--bg-color);
   border: 2px solid var(--text-color);
+  width: clamp(0px, 100%, 698px);
+  margin: 0 auto 50px;
 }
 
 .card-title {
